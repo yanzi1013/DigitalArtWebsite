@@ -1,0 +1,259 @@
+﻿:root {
+    --background: #fbf7f3;
+    --surface: #ffffff;
+    --surface-alt: #f6edf0;
+    --text: #333333;
+    --muted: #6d6a6d;
+    --accent: #d3a4de;
+    --accent-dark: #9e6cb6;
+    --border: #e6dfe6;
+    --shadow: 0 18px 40px rgba(157, 126, 178, 0.12);
+}
+
+html,
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #fff9f3 0%, #f6eef7 100%);
+    color: var(--text);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.site-header,
+.site-footer {
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid rgba(159, 126, 178, 0.12);
+    box-shadow: 0 6px 24px rgba(172, 121, 198, 0.08);
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner,
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem;
+}
+
+.brand {
+    color: #4a2c5b;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.site-nav a {
+    color: #6d577a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.site-nav a:hover {
+    color: var(--accent-dark);
+}
+
+.page-shell {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+}
+
+.hero {
+    border-radius: 30px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), #f7eef6);
+    box-shadow: var(--shadow);
+    padding: 3rem;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 1.05;
+    color: #4a2c5b;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 760px;
+}
+
+.btn-primary-custom,
+.btn-secondary-custom {
+    border-radius: 999px;
+    padding: 0.95rem 1.75rem;
+    border: none;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.btn-primary-custom {
+    background: var(--accent);
+    color: #fff;
+}
+
+.btn-secondary-custom {
+    background: #fff;
+    color: var(--accent-dark);
+    border: 1px solid var(--border);
+}
+
+.section-heading {
+    margin-bottom: 1rem;
+    color: #56405b;
+}
+
+.section-subtitle {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.card-grid,
+.post-list,
+.admin-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.art-card,
+.inspiration-card,
+.info-panel,
+.form-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.art-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.art-card-content,
+.inspiration-card-content,
+.panel-body {
+    padding: 1.35rem;
+}
+
+.art-card-title,
+.post-title {
+    margin: 0 0 0.5rem;
+    color: #3c1f47;
+    font-size: 1.1rem;
+}
+
+.art-card-meta,
+.post-meta {
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin-bottom: 0.85rem;
+}
+
+.art-card-description,
+.post-content {
+    line-height: 1.7;
+    color: #5f546b;
+    margin-bottom: 1rem;
+}
+
+.label {
+    display: block;
+    font-weight: 700;
+    color: #5f4a6b;
+    margin-bottom: 0.35rem;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid #e3dbe5;
+    background: var(--surface-alt);
+    padding: 0.95rem 1rem;
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-section {
+    background: var(--surface);
+    padding: 1.75rem;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.form-panel button {
+    margin-top: 0.25rem;
+}
+
+.success-message {
+    border-radius: 16px;
+    padding: 1rem 1.25rem;
+    background: #f4f7ef;
+    border: 1px solid #d7e4d0;
+    color: #3a5b2a;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        padding: 4rem;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .admin-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header-inner,
+    .footer-inner,
+    .page-shell {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .site-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
